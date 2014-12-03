@@ -1,0 +1,30 @@
+doctype html
+html.no-js[lang="en"]
+  head
+    meta charset="UTF-8" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    link rel="stylesheet" href="/stylesheets/app.css"
+    == js :modernizr
+
+  title Sinatra App
+
+  body
+    .row
+      .small-12.columns
+        h1
+          | Sinatra running Foundation with Compass
+    == yield
+
+    .row
+      .small-12.columns
+        .row
+          .small-6.columns
+            p.text-left
+              | © App name
+          .small-6.columns
+            p.text-right
+              App footer's information some@email.com
+
+    == js :libs
+    == js :application
+
