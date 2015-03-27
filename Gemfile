@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby '2.1.5'
 
 gem 'foundation'
-gem 'haml'
+gem "mongoid", "~> 4.0.0"
 gem 'rack-livereload'
 gem 'sinatra'
 gem 'sinatra-assetpack'
