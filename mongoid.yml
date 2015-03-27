@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: html_document_viewer
+      hosts:
+        - localhost:27017
