@@ -7,12 +7,9 @@ require 'slim'
 require 'compass'
 require 'mongoid'
 
-configure do
-  Mongoid.load!(File.dirname(__FILE__)+"/mongoid.yml")
-end
-
-require_relative 'models/init'
 require_relative 'config/load_assets'
+require_relative 'config/load_mongoid'
+require_relative 'models/init'
 
 get '/' do
   @documents = Document
