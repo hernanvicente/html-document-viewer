@@ -1,0 +1,11 @@
+.row
+  .small-12.columns
+    h3 Delete document
+    hr
+    p Are you sure you want to delete the document?
+    .text-center
+      h4 #{@document.name}
+      form action="/documents/#{@document.id}" method="POST"
+        input type="hidden" name="_method" value="DELETE"
+        input.button.alert type="submit" value="delete"
+        a.button.secondary href="/documents" cancel

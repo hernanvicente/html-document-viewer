@@ -1,0 +1,20 @@
+.row
+  .small-12.columns
+    label
+      | Name
+      input.title type="text" name="document[name]" value="#{@document.name}" size="200"
+.row
+  .small-12.columns
+    label
+      | Author
+      input.author type="text" name="document[author]" value="#{@document.author}" size="32"
+.row
+  .small-12.columns
+    label
+      | Description
+      textarea.content name="document[description]" rows="12" cols="72" ==@document.description
+.row
+  .small-12.columns
+    label for="html_code"
+      | HTML CODE
+      textarea.content name="document[html_code]" rows="12" cols="72" ==@document.html_code

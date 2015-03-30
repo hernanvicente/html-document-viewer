@@ -6,6 +6,6 @@ class Document
   field :description, type: String
   field :html_code,   type: String
 
-  validates :name, :description, presence: true
+  validates :author, :description, :name, :html_code, presence: true
 
 end

@@ -15,3 +15,43 @@ get '/' do
   @documents = Document
   slim :index
 end
+
+delete '/documents/:id' do
+  Document.find(params[:id]).destroy
+  redirect to('/')
+end
+
+put '/documents/:id' do
+  document = Document.find(params[:id])
+  document.update_attributes(params[:document])
+  redirect to("/documents/show/#{document.id}")
+end
+
+post '/documents/create' do
+  @document = Document.create params[:document]
+  if @document.save
+    redirect to("/documents/show/#{@document.id}")
+  else
+    redirect to("/documents/new")
+  end
+end
+
+get '/documents/delete/:id' do
+  @document = Document.find(params[:id])
+  slim :delete
+end
+
+get '/documents/edit/:id' do
+  @document = Document.find(params[:id])
+  slim :edit
+end
+
+get '/documents/new' do
+  @document = Document.new
+  slim :new
+end
+
+get '/documents/show/:id' do
+  @document = Document.find(params[:id])
+  slim :show, layout: false
+end

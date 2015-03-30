@@ -13,14 +13,15 @@ class AppTest < Minitest::Test
     @document = build(:document)
   end
 
-  def test_true_is_true
-    assert true
-  end
-
   def assert_presence(model, field)
     model.valid?
     assert_match(/can't be blank/, model.errors[field].join,
       "Presence error for #{field} not found on #{model.class}")
+  end
+
+  def test_invalid_author_give_error_message
+    @document.author = nil
+    assert_presence(@document, :author)
   end
 
   def test_invalid_name_give_error_message
@@ -33,4 +34,8 @@ class AppTest < Minitest::Test
     assert_presence(@document, :description)
   end
 
+  def test_invalid_html_code_give_error_message
+    @document.html_code = nil
+    assert_presence(@document, :html_code)
+  end
 end

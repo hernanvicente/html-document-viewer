@@ -6,24 +6,35 @@ html.no-js[lang="en"]
     link rel="stylesheet" href="/stylesheets/app.css"
     == js :modernizr
 
-  title Sinatra App
+  title html document viewer
 
   body
+    .top-bar data-topbar="" role="navigation"
+      ul.title-area
+        li.name
+          h1
+            a html document viewer
+        li.toggle-topbar.menu-icon
+          a href="#"
+            span Menu
+      section.top-bar-section
+        ul.right
+          li
+            a href="/documents/new" new document
+          li.active
+            a href="/" back
     .row
       .small-12.columns
-        h1
-          | Sinatra running Foundation with Compass
-    == yield
-
+        == yield
     .row
       .small-12.columns
         .row
           .small-6.columns
             p.text-left
-              | © App name
+              | html document viewer
           .small-6.columns
             p.text-right
-              App footer's information some@email.com
+              | hernan.maguina@gmail.com
 
     == js :libs
     == js :application

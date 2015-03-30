@@ -1,0 +1,10 @@
+.row
+  .small-12.colums
+    h3 Edit document
+    hr
+    form action="/documents/#{@document.id}" method="POST"
+      input type="hidden" name="_method" value="PUT"
+      == slim :form
+      .row
+        .small-12.columns
+          input.button.success type="submit" value="Update"
