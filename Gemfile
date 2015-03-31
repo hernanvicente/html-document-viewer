@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby '2.1.5'
 
+gem 'carrierwave'
+gem 'carrierwave-mongoid'
 gem 'foundation'
 gem "mongoid", "~> 4.0.0"
 gem 'rack-livereload'
@@ -10,6 +12,7 @@ gem 'sinatra-assetpack'
 gem 'sinatra-contrib'
 gem 'slim'
 gem 'thin'
+gem 'tux'
 
 # From https://github.com/guard/listen/issues/275
 gem 'listen', '2.7.11'
