@@ -1,22 +1,30 @@
 assets do
-
-  serve '/js', :from => 'assets/javascripts'
-  serve '/bower_components', from: 'assets/bower_components'
+  serve '/css',   from: 'assets/stylesheets'
+  serve '/js',    from: 'assets/javascripts'
+  serve '/bower', from: 'assets/bower_components'
 
   js :modernizr, [
-    'assets/bower_components/modernizr/modernizr.js',
+    '/bower/modernizr/modernizr.js',
   ]
 
   js :libs, [
-    'assets/bower_components/jquery/dist/jquery.js',
-    'assets/bower_components/foundation/js/foundation.js'
+    '/bower/jquery/dist/jquery.js',
+    '/bower/foundation/js/foundation.js',
+    '/bower/codemirror/lib/codemirror.js',
+    '/bower/codemirror/mode/xml/xml.js',
+    '/bower/codemirror/addon/selection/active-line.js'
   ]
 
   js :application, [
-    'assets/javascripts/app.js'
+    '/js/app.js'
     #'/js/jquery.js',
     #'/js/app.js'
     # You can also do this: 'js/*.js'
+  ]
+
+  css :codemirror, [
+    '/bower/codemirror/lib/codemirror.css',
+    '/bower/codemirror/theme/xq-light.css'
   ]
 
   js_compression :jsmin
