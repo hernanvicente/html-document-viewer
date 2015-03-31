@@ -1,5 +1,7 @@
 class Document
   include Mongoid::Document
+  embeds_many :images, cascade_callbacks: true
+  accepts_nested_attributes_for :images
 
   field :name,        type: String
   field :author,      type: String

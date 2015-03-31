@@ -2,7 +2,7 @@
   .small-12.colums
     h3 New document
     hr
-    form action="/documents/create" method="POST"
+    form action="/documents/create" method="POST" enctype="multipart/form-data"
       == slim :form
       .row
         .small-12.columns

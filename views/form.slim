@@ -17,4 +17,10 @@
   .small-12.columns
     label for="html_code"
       | HTML CODE
-      textarea.content name="document[html_code]" rows="12" cols="72" ==@document.html_code
+      textarea.content name="document[html_code]" rows="12" cols="72" == @document.html_code
+.row
+  .small-12.columns
+    - 10.times do |i|
+      label
+        | Image #{i}
+        input type="file" name="document[images][][file]" == @document.images[i].file if @document.images[i]

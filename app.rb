@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'bson'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sinatra/assetpack'
@@ -6,6 +7,8 @@ require 'sass'
 require 'slim'
 require 'compass'
 require 'mongoid'
+require 'carrierwave'
+require 'carrierwave/mongoid'
 
 require_relative 'config/load_assets'
 require_relative 'config/load_mongoid'
@@ -22,17 +25,15 @@ delete '/documents/:id' do
 end
 
 put '/documents/:id' do
-  document = Document.find(params[:id])
-  document.update_attributes(params[:document])
-  redirect to("/documents/show/#{document.id}")
+  @document = Document.find(params[:id])
+  @document.update_attributes(params[:document])
+  redirect to("/documents/edit/#{@document.id}")
 end
 
 post '/documents/create' do
   @document = Document.create params[:document]
   if @document.save
-    redirect to("/documents/show/#{@document.id}")
-  else
-    redirect to("/documents/new")
+    redirect to("/documents/edit/#{@document.id}")
   end
 end
 

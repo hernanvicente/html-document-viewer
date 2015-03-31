@@ -23,9 +23,7 @@ html.no-js[lang="en"]
             a href="/documents/new" new document
           li.active
             a href="/" back
-    .row
-      .small-12.columns
-        == yield
+    == yield
     .row
       .small-12.columns
         .row
@@ -34,7 +32,7 @@ html.no-js[lang="en"]
               | html document viewer
           .small-6.columns
             p.text-right
-              | hernan.maguina@gmail.com
+              | Made with love using ruby and mongodb
 
     == js :libs
     == js :application
