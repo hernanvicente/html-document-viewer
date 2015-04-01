@@ -8,6 +8,10 @@ Run <code>bundle exec compass watch</code> to compile css styles.
 TODO
 -------
 
+* Improve ui topbar and buttons with icons
+* Add friendly url for documents
+* Add clone option
+* Fix: add folder name based on the document_id for images
 * Try to run racklivereload with Sinatra
 * Codemirror folding
 * Add authentication
