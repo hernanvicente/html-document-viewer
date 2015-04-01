@@ -11,6 +11,7 @@ require 'carrierwave'
 require 'carrierwave/mongoid'
 
 require_relative 'config/load_assets'
+require_relative 'config/load_carrierwave'
 require_relative 'config/load_mongoid'
 require_relative 'models/init'
 

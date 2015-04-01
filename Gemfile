@@ -5,6 +5,7 @@ ruby '2.1.5'
 gem 'carrierwave'
 gem 'carrierwave-mongoid'
 gem 'foundation'
+gem 'fog-aws'
 gem 'foreman'
 gem "mongoid", "~> 4.0.0"
 gem 'rack-livereload'

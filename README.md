@@ -26,3 +26,5 @@ MONGOLAB_URI => mongodb://heroku_app1234:random_password@ds029017.mongolab.com:2
 
 mongodb://heroku_app35427255:jev5drltd7tdqrt04iovi6i2bc@ds059821.mongolab.com:59821/heroku_app35427255
 
+Accesing the MongoLab UI Admin
+heroku addons:open mongolab
