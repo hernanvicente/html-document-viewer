@@ -41,6 +41,7 @@ GEM
       sass (>= 3.2, < 3.5)
     connection_pool (2.1.0)
     daemons (1.1.9)
+    dotenv (1.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -48,6 +49,9 @@ GEM
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     ffi (1.9.6)
+    foreman (0.77.0)
+      dotenv (~> 1.0.2)
+      thor (~> 0.19.1)
     formatador (0.2.5)
     foundation (1.0.4)
       thor (>= 0.18.1)
@@ -162,6 +166,7 @@ DEPENDENCIES
   carrierwave-mongoid
   compass (~> 1.0)
   factory_girl
+  foreman
   foundation
   guard
   guard-livereload
